@@ -19,4 +19,4 @@ jobs:
           cd /home/lazarmarkov/blog
           git pull origin main
           bundle
-          sudo systemctl restart blog
+          systemctl --user restart blog
