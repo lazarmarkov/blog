@@ -16,7 +16,4 @@ jobs:
         username: ${{ secrets.GCP_VM_USER }}
         key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
         script: |
-          cd /home/lazarmarkov/blog
-          git pull origin main
-          bundle
-          systemctl --user restart blog
+          /home/lazarmarkov/blog/deploy.sh
