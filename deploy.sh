@@ -2,9 +2,12 @@
 set -e
 
 cd /home/lazarmarkov/blog
-
-source ~/.bashrc
 git pull origin main
+
+# Initialize rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 bundle install
 bundle exec rails db:migrate
 systemctl --user restart blog
